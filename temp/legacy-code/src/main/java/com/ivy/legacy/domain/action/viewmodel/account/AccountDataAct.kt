@@ -31,14 +31,14 @@ class AccountDataAct @Inject constructor(
 
         val balanceBaseCurrency = if (acc.asset.code != baseCurrency) {
             exchangeAct(
-                ExchangeAct.Input(
-                    data = ExchangeData(
-                        baseCurrency = baseCurrency,
-                        fromCurrency = acc.asset.code.toOption()
-                    ),
-                    amount = balance
-                )
-            ).orNull()
+                        ExchangeAct.Input(
+                            data = ExchangeData(
+                                baseCurrency = baseCurrency,
+                                fromCurrency = acc.asset.code.toOption()
+                            ),
+                            amount = balance
+                        )
+                    ).getOrNull()
         } else {
             null
         }
