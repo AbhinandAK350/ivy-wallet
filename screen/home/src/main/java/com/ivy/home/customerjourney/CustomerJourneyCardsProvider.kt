@@ -56,9 +56,9 @@ class CustomerJourneyCardsProvider @Inject constructor(
     companion object {
         val ACTIVE_CARDS = listOf(
             adjustBalanceCard(),
-            addPlannedPaymentCard(),
-            didYouKnow_pinAddTransactionWidgetCard(),
-            didYouKnow_expensesPieChart(),
+//            addPlannedPaymentCard(),
+//            didYouKnow_pinAddTransactionWidgetCard(),
+//            didYouKnow_expensesPieChart(),
         )
 
         fun adjustBalanceCard() = CustomerJourneyCardModel(
