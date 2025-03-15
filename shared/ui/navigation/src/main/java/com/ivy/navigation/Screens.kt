@@ -141,5 +141,3 @@ data object AttributionsScreen : Screen
 data object ContributorsScreen : Screen
 
 data object ReleasesScreen : Screen
-
-data object DisclaimerScreen : Screen

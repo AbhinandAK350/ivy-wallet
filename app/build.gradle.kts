@@ -128,7 +128,6 @@ dependencies {
     implementation(projects.screen.budgets)
     implementation(projects.screen.categories)
     implementation(projects.screen.contributors)
-    implementation(projects.screen.disclaimer)
     implementation(projects.screen.editTransaction)
     implementation(projects.screen.exchangeRates)
     implementation(projects.screen.features)

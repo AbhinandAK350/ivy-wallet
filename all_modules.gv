@@ -4,7 +4,6 @@ digraph G {
 ":app" -> ":screen:budgets"
 ":app" -> ":screen:categories"
 ":app" -> ":screen:contributors"
-":app" -> ":screen:disclaimer"
 ":app" -> ":screen:edit-transaction" [color=red style=bold]
 ":app" -> ":screen:exchange-rates"
 ":app" -> ":screen:features"
@@ -56,7 +55,6 @@ digraph G {
 ":screen:contributors" -> ":shared:domain"
 ":screen:contributors" -> ":shared:ui:core"
 ":screen:contributors" -> ":shared:ui:navigation"
-":screen:disclaimer" -> ":shared:data:core"
 ":screen:disclaimer" -> ":shared:ui:core"
 ":screen:disclaimer" -> ":shared:ui:navigation"
 ":screen:edit-transaction" -> ":shared:base"
