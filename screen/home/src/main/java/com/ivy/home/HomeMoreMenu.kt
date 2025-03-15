@@ -445,15 +445,15 @@ private fun QuickAccess(
 //            ivyContext.navigateTo(Screen.Charts)
 //        }
 
-            val rootScreen = rootScreen()
-            MoreMenuButton(
-                icon = R.drawable.home_more_menu_share,
-                label = stringResource(R.string.share_ivy)
-            ) {
-                rootScreen.shareIvyWallet()
-            }
-
-            Spacer(Modifier.weight(1f))
+            rootScreen()
+//            MoreMenuButton(
+//                icon = R.drawable.home_more_menu_share,
+//                label = stringResource(R.string.share_ivy)
+//            ) {
+//                rootScreen.shareIvyWallet()
+//            }
+//
+//            Spacer(Modifier.weight(1f))
 
             MoreMenuButton(
                 icon = R.drawable.home_more_menu_reports,
