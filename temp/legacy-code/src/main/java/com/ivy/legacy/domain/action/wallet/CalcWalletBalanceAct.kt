@@ -1,5 +1,6 @@
 package com.ivy.wallet.domain.action.wallet
 
+import arrow.core.getOrElse
 import arrow.core.toOption
 import com.ivy.data.model.Account
 import com.ivy.data.model.AccountId
@@ -60,7 +61,7 @@ class CalcWalletBalanceAct @Inject constructor(
                 )
             )
         } thenSum {
-            it.orNull() ?: BigDecimal.ZERO
+            it.getOrElse { BigDecimal.ZERO }
         }
 
     @Suppress("DataClassDefaultValues")

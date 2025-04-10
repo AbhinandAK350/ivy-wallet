@@ -8,9 +8,8 @@ import java.math.BigDecimal
 fun <T> NonEmptyList<T>.mapIndexedNel(
     f: (Int, T) -> T
 ): NonEmptyList<T> {
-    return NonEmptyList.fromListUnsafe(
-        this.mapIndexed(f)
-    )
+    val mapped = this.toList().mapIndexed(f)
+    return NonEmptyList(mapped.first(), mapped.drop(1))
 }
 
 suspend fun <T> NonEmptyList<T>.mapIndexedNelSuspend(
@@ -24,11 +23,10 @@ suspend fun <T> NonEmptyList<T>.mapIndexedNelSuspend(
 }
 
 fun nonEmptyListOfZeros(n: Int): NonEmptyList<BigDecimal> {
-    return NonEmptyList.fromListUnsafe(
-        List(n) { BigDecimal.ZERO }
-    )
+    require(n > 0) { "NonEmptyList must have at least one element" }
+    return NonEmptyList(BigDecimal.ZERO, List(n - 1) { BigDecimal.ZERO })
 }
 
 fun Option<BigDecimal>.orZero(): BigDecimal {
-    return this.orNull() ?: BigDecimal.ZERO
+    return this.getOrNull() ?: BigDecimal.ZERO
 }
